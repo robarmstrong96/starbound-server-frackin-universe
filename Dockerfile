@@ -1,6 +1,6 @@
 FROM didstopia/base:steamcmd-ubuntu-20.04
 
-LABEL maintainer="Didstopia <support@didstopia.com>"
+#LABEL maintainer="Didstopia <support@didstopia.com>"
 
 # Fixes apt-get warnings
 ARG DEBIAN_FRONTEND=noninteractive
