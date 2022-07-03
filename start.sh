@@ -77,14 +77,23 @@ fi
 
 echo "Handling downloaded mods..."
 
-# Move downloaded workshop items to starbound mods folder
+MODDIRECTORY="/steamcmd/starbound/mods"
+
+# Remove previously downloaded mods in mods directory
+if [ ! -f "$MODDIRECTORY" ]; then
+	echo "Removing mods in $MODDIRECTORY"
+	rm -r "$MODDIRECTORY/*" # remove all files located in the specified mod directory
+else
+	echo "Unable to remove previous mods; mods directory does not exist!"
+fi
+
+# Move downloaded workshop items to starbound mods folder using format [workshopid]-[pak_filename].pak
 if [ ! -f "/steamcmd/starbound/steamapps/workshop/content/211820" ]; then
 	cd /steamcmd/starbound/steamapps/workshop/content/211820 || exit 1 # Set the working directory
 	for i in $(find -name \*.pak); do
 		FILENAME="$(basename $i)"
 		PARENTDIR="$(dirname "$i")"
 		PARENTDIRNAME="$(basename $PARENTDIR)"
-		MODDIRECTORY="/steamcmd/starbound/mods"
 		echo "Renaming $FILENAME to $PARENTDIRNAME.pak and moving the new file to $MODDIRECTORY/$PARENTDIRNAME-$FILENAME from $i"
 		cp -- "$i" "$MODDIRECTORY/$PARENTDIRNAME-$FILENAME"
 	done
