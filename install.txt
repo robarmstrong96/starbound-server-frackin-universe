@@ -3,5 +3,10 @@ force_install_dir /steamcmd/starbound
 login anonymous
 app_info_update 1
 app_update 211820 validate
-workshop_download_item 729480149 945707062 731220462 850109963 764888606 764887546 validate
+workshop_download_item 211820 729480149 
+workshop_download_item 211820 945707062 
+workshop_download_item 211820 731220462 
+workshop_download_item 211820 850109963 
+workshop_download_item 211820 764888606 
+workshop_download_item 211820 764887546
 quit
