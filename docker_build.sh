@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build -t didstopia/starbound-server:latest .
+docker build -t robstrong/starbound-server-frackin-universe:latest .

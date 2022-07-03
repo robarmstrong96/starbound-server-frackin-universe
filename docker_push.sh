@@ -1,4 +1,4 @@
 #!/bin/bash
 
-docker tag didstopia/starbound-server:latest didstopia/starbound-server:latest
-docker push didstopia/starbound-server:latest
+docker tag robstrong/starbound-server-frackin-universe:latest robstrong/starbound-server-frackin-universe:latest
+docker push robstrong/starbound-server-frackin-universe:latest

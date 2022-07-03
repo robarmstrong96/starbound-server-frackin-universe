@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build --no-cache -t didstopia/starbound-server:latest .
+docker build --no-cache -t robstrong/starbound-server-frackin-universe:latest .

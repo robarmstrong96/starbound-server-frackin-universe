@@ -1,6 +1,6 @@
 services:
   starbound-server:
-    image: didstopia/starbound-server:latest
+    image: robstrong/starbound-server-frackin-universe:latest
     build:
       context: .
       dockerfile: Dockerfile
