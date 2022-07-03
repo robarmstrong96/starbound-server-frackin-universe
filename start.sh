@@ -81,15 +81,12 @@ echo "Handling downloaded mods..."
 if [ ! -f "/steamcmd/starbound/steamapps/workshop/content/211820" ]; then
 	cd /steamcmd/starbound/steamapps/workshop/content/211820 || exit 1 # Set the working directory
 	for i in $(find -name \*.pak); do
-		#echo "$i"
 		FILENAME="$(basename $i)"
-		#echo "Filename: $FILENAME"
 		PARENTDIR="$(dirname "$i")"
-		#echo "Parent Directory: $PARENTDIR"
 		PARENTDIRNAME="$(basename $PARENTDIR)"
-		#echo "Parent Directory Name: $PARENTDIRNAME"
 		MODDIRECTORY="/steamcmd/starbound/mods"
 		echo "Renaming $FILENAME to $PARENTDIRNAME.pak and moving the new file to $MODDIRECTORY/$PARENTDIRNAME.pak"
+		mv -- "$i" "$MODDIRECTORY/$PARENTDIRNAME.pak"
 	done
 
 else
