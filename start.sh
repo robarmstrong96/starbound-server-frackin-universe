@@ -77,6 +77,16 @@ else
 	fi
 fi
 
+# Move downloaded workshop items to starbound mods folder
+if [ ! -f "/steamcmd/starbound/steamapps/workshop/content/211820"]; then
+	# Set the working directory
+	cd /steamcmd/starbound/steamapps/workshop/content/211820 || exit 1
+	for i in $(find -name \*.pak); do # Will break on whitespace, shouldn't be an issue
+    	echo "$i"
+	done
+else
+	echo "Unable to move mods over to mods folder as no workshop folder exists, mods will not be loaded!"
+
 # Set the working directory
 cd /steamcmd/starbound/linux || exit 1
 
