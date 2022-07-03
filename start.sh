@@ -85,8 +85,8 @@ if [ ! -f "/steamcmd/starbound/steamapps/workshop/content/211820" ]; then
 		PARENTDIR="$(dirname "$i")"
 		PARENTDIRNAME="$(basename $PARENTDIR)"
 		MODDIRECTORY="/steamcmd/starbound/mods"
-		echo "Renaming $FILENAME to $PARENTDIRNAME.pak and moving the new file to $MODDIRECTORY/$PARENTDIRNAME.pak"
-		mv -- "$i" "$MODDIRECTORY/$PARENTDIRNAME.pak"
+		echo "Renaming $FILENAME to $PARENTDIRNAME.pak and moving the new file to $MODDIRECTORY/$PARENTDIRNAME.pak from $i"
+		cp -- "$i" "$MODDIRECTORY/$PARENTDIRNAME.pak"
 	done
 
 else
