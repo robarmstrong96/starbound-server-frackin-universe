@@ -86,6 +86,8 @@ if [ ! -f "/steamcmd/starbound/steamapps/workshop/content/211820" ]; then
 		echo "Filename: $FILENAME"
 		PARENTDIR="$(dirname "$i")"
 		echo "Parent Directory: $PARENTDIR"
+		PARENTDIRNAME="$(basename $PARENTDIR)"
+		echo "Parent Directory Name: $PARENTDIRNAME"
 	done
 
 else
