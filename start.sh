@@ -82,7 +82,7 @@ MODDIRECTORY="/steamcmd/starbound/mods"
 # Remove previously downloaded mods in mods directory
 if [ ! -f "$MODDIRECTORY" ]; then
 	echo "Removing mods in $MODDIRECTORY"
-	rm -r "$MODDIRECTORY/*" # remove all files located in the specified mod directory
+	rm -r $MODDIRECTORY/* # remove all files located in the specified mod directory
 else
 	echo "Unable to remove previous mods; mods directory does not exist!"
 fi
