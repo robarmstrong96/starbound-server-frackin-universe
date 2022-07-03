@@ -77,8 +77,10 @@ else
 	fi
 fi
 
+echo "Handling downloaded mods..."
+
 # Move downloaded workshop items to starbound mods folder
-if [ ! -f "/steamcmd/starbound/steamapps/workshop/content/211820"]; then
+if [ ! -f "/steamcmd/starbound/steamapps/workshop/content/211820" ]; then
 	# Set the working directory
 	cd /steamcmd/starbound/steamapps/workshop/content/211820 || exit 1
 	for i in $(find -name \*.pak); do # Will break on whitespace, shouldn't be an issue
