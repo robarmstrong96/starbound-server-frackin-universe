@@ -82,7 +82,9 @@ if [ ! -f "/steamcmd/starbound/steamapps/workshop/content/211820" ]; then
 	cd /steamcmd/starbound/steamapps/workshop/content/211820 || exit 1 # Set the working directory
 	for i in $(find -name \*.pak); do
 		echo "$i"
+		echo "$($i/..)"
 	done
+	
 else
 	echo "Unable to move mods over to mods folder as no workshop folder exists, mods will not be loaded!"
 fi
